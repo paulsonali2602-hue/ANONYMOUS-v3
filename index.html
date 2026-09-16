@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>ANONYMOUS - SURVIVAL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="rotate" class="rotate"><div><strong>ANONYMOUS</strong><span>ROTATE TO LANDSCAPE</span></div></div>
+
+<div id="menu" class="screen active">
+  <div class="menu-noise"></div>
+  <div class="menu-center">
+    <div class="brand">A N O N Y M O U S</div>
+    <div class="game-title">SURVIVAL</div>
+    <div class="tag">TWO MINUTES. ONE NIGHT. NO EXIT.</div>
+    <button data-sound="click" id="play">START SURVIVAL</button>
+    <button data-sound="click" id="settingsBtn">SETTINGS</button>
+    <button data-sound="click" id="playerBtn">PLAYER</button>
+  </div>
+  <div class="corner">BLACK / WHITE HORROR</div>
+</div>
+
+<div id="settings" class="screen">
+  <div class="modal">
+    <h1>SETTINGS</h1>
+    <label>MASTER VOLUME <input id="volume" type="range" min="0" max="1" step=".01"></label>
+    <label>SOUND EFFECTS <input id="sfx" type="checkbox"></label>
+    <label>SHADOWS <input id="shadows" type="checkbox"></label>
+    <label>LOOK SENSITIVITY <input id="sensitivity" type="range" min=".5" max="2" step=".05"></label>
+    <button data-sound="click" id="settingsBack">BACK</button>
+  </div>
+</div>
+
+<div id="player" class="screen">
+  <div class="modal">
+    <h1>PLAYER</h1>
+    <label>NAME <input id="playerName" maxlength="16" value="ANONYMOUS"></label>
+    <label>BODY SCALE <input id="bodyScale" type="range" min=".85" max="1.15" step=".01" value="1"></label>
+    <label>HEAD SCALE <input id="headScale" type="range" min=".85" max="1.2" step=".01" value="1"></label>
+    <button data-sound="click" id="playerSave">SAVE</button>
+    <button data-sound="click" id="playerBack">BACK</button>
+  </div>
+</div>
+
+<div id="game" class="screen">
+  <div id="hud">
+    <div class="hud-left">
+      <div id="nameHud">ANONYMOUS</div>
+      <div class="objective">SURVIVE UNTIL THE SIGNAL ENDS</div>
+    </div>
+    <div id="timer">02:00</div>
+    <div id="threat"><span>THREAT</span><i><b id="threatFill"></b></i></div>
+  </div>
+  <div id="crosshair">+</div>
+  <div id="damage"></div>
+  <div id="message"></div>
+  <div id="joystick"><div id="stick"></div></div>
+  <div id="lookZone"></div>
+  <button id="jump" data-sound="jump">JUMP</button>
+  <button id="pause" data-sound="click">II</button>
+</div>
+
+<div id="lobby" class="screen">
+  <div class="modal ending">
+    <div class="seal">ZONE SEALED</div>
+    <h1>NEW LOBBY</h1>
+    <p>The signal has ended.</p>
+    <button data-sound="click" id="menuBack">RETURN TO LOBBY</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.min.js"></script>
+<script src="app.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;touch-action:none}
+button,input{font:inherit}button{border:1px solid #fff;background:#050505;color:#fff;padding:13px 20px;letter-spacing:2px;cursor:pointer}button:active{background:#fff;color:#000}
+.screen{position:fixed;inset:0;display:none}.screen.active{display:block}
+.rotate{display:none;position:fixed;z-index:999;inset:0;background:#000;align-items:center;justify-content:center;text-align:center}.rotate strong{display:block;font-size:30px;letter-spacing:9px}.rotate span{display:block;margin-top:14px;color:#999;letter-spacing:4px;font-size:11px}
+.menu-noise{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#262626 0,#0a0a0a 48%,#000 100%)}.menu-noise:after{content:"";position:absolute;inset:0;opacity:.12;background:repeating-linear-gradient(0deg,#fff0 0 3px,#fff 4px,#fff0 5px)}
+.menu-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;text-align:center}.brand{letter-spacing:10px;font-size:12px;color:#ddd}.game-title{font-size:clamp(50px,10vw,120px);font-weight:900;letter-spacing:12px;line-height:.9}.tag{font-size:10px;letter-spacing:4px;color:#999;margin:12px 0 24px}.menu-center button{width:min(350px,78vw)}.corner{position:absolute;left:18px;bottom:16px;font-size:9px;letter-spacing:3px;color:#555}
+.modal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);min-width:min(440px,90vw);padding:28px;background:rgba(0,0,0,.9);border:1px solid #aaa;display:flex;flex-direction:column;gap:17px;box-shadow:0 15px 80px #000}.modal h1{margin:0 0 8px;letter-spacing:6px}.modal label{display:flex;justify-content:space-between;align-items:center;gap:25px;font-size:11px;letter-spacing:2px}.modal input[type=range]{width:170px;accent-color:#fff}.modal input[type=text],.modal label input:not([type]){background:#000;border:1px solid #777;color:#fff;padding:9px;width:170px}
+#game{background:#000}.game-canvas{position:absolute;inset:0;display:block}
+#hud{position:absolute;inset:0;pointer-events:none}.hud-left{position:absolute;left:22px;top:17px}.hud-left #nameHud{font-size:11px;letter-spacing:4px}.objective{margin-top:7px;font-size:8px;letter-spacing:3px;color:#aaa}.objective:after{content:"";display:block;width:170px;height:1px;background:#777;margin-top:7px}
+#timer{position:absolute;right:23px;top:14px;font-size:clamp(32px,6vw,64px);font-variant-numeric:tabular-nums;letter-spacing:4px;text-shadow:0 2px 10px #000}
+#threat{position:absolute;right:25px;top:94px;width:170px;font-size:8px;letter-spacing:3px;text-align:right}.threat i{display:block;height:4px;border:1px solid #777;margin-top:5px}.threat b{display:block;height:100%;width:0;background:#fff}
+#crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:18px;color:#ddd;pointer-events:none}
+#damage{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 #fff;transition:box-shadow .15s}.hit{box-shadow:inset 0 0 100px #fff!important}
+#message{position:absolute;left:50%;top:23%;transform:translateX(-50%);font-size:11px;letter-spacing:5px;text-align:center;opacity:0;transition:opacity .2s}
+#joystick{position:absolute;left:24px;bottom:28px;width:126px;height:126px;border:1px solid #777;border-radius:50%;background:#0008}.joystick-inner{position:absolute}.stick{position:absolute}
+#stick{position:absolute;left:38px;top:38px;width:48px;height:48px;border:1px solid #fff;border-radius:50%;background:#fff1}
+#lookZone{position:absolute;right:0;top:0;width:58%;height:72%}
+#jump,#pause{position:absolute;border-radius:50%;width:88px;height:88px;padding:0;bottom:30px;right:24px;background:#000b}#pause{width:48px;height:48px;right:128px;bottom:50px;font-size:10px}
+.ending{text-align:center}.seal{font-size:clamp(30px,7vw,70px);font-weight:900;letter-spacing:8px}.ending p{color:#999;letter-spacing:2px}
+@media(max-width:700px){.modal{padding:20px}.game-title{letter-spacing:7px}.tag{letter-spacing:2px}.objective{font-size:7px}.hud-left{left:12px}.hud-left #nameHud{font-size:9px}.objective:after{width:120px}#timer{right:12px}#threat{right:12px;width:125px;top:80px}#joystick{left:18px;bottom:18px;width:108px;height:108px}#stick{left:31px;top:31px;width:44px;height:44px}#jump{right:18px;bottom:20px}#pause{right:118px;bottom:41px}}
+@media(orientation:portrait){#rotate{display:flex!important}}
